@@ -1,0 +1,6 @@
+===> multitime results
+1: -r "echo 3 | sudo tee /proc/sys/vm/drop_caches >/dev/null" flatpak run org.libreoffice.LibreOffice --terminate_after_init
+            Mean        Std.Dev.    Min         Median      Max
+real        14.335      0.657       13.668      14.097      16.767      
+user        0.053       0.010       0.023       0.054       0.073       
+sys         0.045       0.011       0.026       0.043       0.079       
