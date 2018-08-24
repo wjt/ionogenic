@@ -1,10 +1,12 @@
 I tried using [multitime](http://tratt.net/laurie/src/multitime/) to launch LibreOffice 15 times (flushing disk caches between each run). I wrote [this little program](https://github.com/wjt/ionogenic/blob/master/src/main.c) to install/uninstall a flatpak bundle in a loop, to see if this makes a difference versus running the `flatpak install`/`flatpak uninstall` commands from the shell (it does).
 
-All measurements on a Yoga 900, otherwise unloaded, running `multitime -r 'echo 3 | sudo tee /proc/sys/vm/drop_caches' -n 15 flatpak run  org.libreoffice.LibreOffice --terminate_after_init` which means:
+Yoga 900 measurements are of running `multitime -r 'echo 3 | sudo tee /proc/sys/vm/drop_caches' -n 15 flatpak run  org.libreoffice.LibreOffice --terminate_after_init` which means:
 
 * 15 trials
 * Flush disk caches after every run
 * Runs LO as unprivileged desktop session user to avoid potential root weirdness
+
+Mission measurements used `-s 5` to sleep up to 5 seconds between runs, and `-n 30` for .. maybe better data and squashing of outliers? Or should we actually be worried about the Max?
 
 ## Bfq
 
