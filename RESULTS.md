@@ -36,6 +36,13 @@ All measurements on a Yoga 900, otherwise unloaded, running `multitime -r 'echo 
     user        0.017       0.007       0.001       0.017       0.027
     sys         0.018       0.008       0.005       0.016       0.032
 
+### Loaded with `sudo ionice -c3 sh -c 'while true; do flatpak install -y /home/wjt/Downloads/org.gnome.Lollypop.flatpak; flatpak uninstall -y org.gnome.Lollypop/x86_64/stable; done'`
+
+                Mean        Std.Dev.    Min         Median      Max
+    real        3.155       0.247       2.932       3.026       3.730
+    user        0.016       0.006       0.006       0.019       0.024
+    sys         0.019       0.007       0.008       0.020       0.034
+
 ## Cfq
 
 ### Unloaded:
